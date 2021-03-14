@@ -80,7 +80,6 @@ describe('TasksService', () => {
         mockTask,
         mockUser,
       );
-      console.log(result);
       expect(result).toEqual('someTaks');
     });
   });
