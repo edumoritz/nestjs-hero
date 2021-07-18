@@ -78,19 +78,21 @@ yarn add @nestjs/config
 yarn add @hapi/joi  
 yarn add -D @types/hapi\_\_joi
 
-- Deploy
-  heroku addons:create heroku-postgresql:hobby-dev -a task-management-edumoritz
-  heroku git:remote -a task-management-edumoritz
-  heroku config:set NPM_CONFIG_PRODUCTION=false
-  heroku config:set NODE_ENV=production
-  heroku config:set STAGE=prod
+## Deploy
 
-  - Settings Postgres Heroku
-    heroku config:set DB_HOST=
-    heroku config:set DB_DATABSE=
-    heroku config:set DB_USERNAME=
-    heroku config:set DB_PORT=5432
-    heroku config:set DB_PASSWORD=
-    heroku config:set JWT_SECRET=
+heroku addons:create heroku-postgresql:hobby-dev -a task-management-edumoritz
+heroku git:remote -a task-management-edumoritz
+heroku config:set NPM_CONFIG_PRODUCTION=false
+heroku config:set NODE_ENV=production
+heroku config:set STAGE=prod
 
-    git push -f heroku HEAD:master
+## Settings Postgres Heroku
+
+heroku config:set DB_HOST=
+heroku config:set DB_DATABSE=
+heroku config:set DB_USERNAME=
+heroku config:set DB_PORT=5432
+heroku config:set DB_PASSWORD=
+heroku config:set JWT_SECRET=
+
+git push -f heroku HEAD:master
